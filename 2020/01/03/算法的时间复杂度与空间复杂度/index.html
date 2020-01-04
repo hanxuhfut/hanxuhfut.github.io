@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="HanXu&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-03T02:10:21.000Z">
-<meta property="article:modified_time" content="2020-01-03T07:51:01.675Z">
+<meta property="article:modified_time" content="2020-01-04T07:46:07.984Z">
 <meta property="article:author" content="HanXu">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
@@ -105,21 +105,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-    <div id="aplayer-wZqGXNTE" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-xSUrNnPN" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="28850451" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
     ></div>
 <a id="more"></a>
 <h2 id="1-算法"><a href="#1-算法" class="headerlink" title="1 算法"></a>1 算法</h2><p>算法具有五个基本特征：输入，输出，有穷性，确定性和可行性。</p>
-<h2 id="2-时间复杂度和空间复杂度"><a href="#2-时间复杂度和空间复杂度" class="headerlink" title="2 时间复杂度和空间复杂度"></a>2 时间复杂度和空间复杂度</h2><ul>
+<h2 id="2-时间复杂度和空间复杂度"><a href="#2-时间复杂度和空间复杂度" class="headerlink" title="2 时间复杂度和空间复杂度"></a>2 时间复杂度和空间复杂度</h2><p>通常，我们都是用”时间复杂度”来指运行时间的需求，用”空间复杂度”指空间需求。当直接要求计算”复杂度”一般是指时间复杂度。</p>
+<ul>
 <li><strong>算法的时间复杂度</strong><br>算法的时间复杂度即算法的度量，记作$T(n)=O(f(n))$，他表示随问题规模$n$的增大，算法的执行时间的增长率和$f(n)$的增长率相同，称作算法的渐进复杂度。</li>
 </ul>
 <ol>
 <li>复杂度并不是一个精确的值，侧重研究算法随输入规模扩大增长的一个抽象。</li>
 <li>更关注复杂度的幂次 $n$ 。</li>
-<li>计算复杂度攻略：在计算分析算法复杂度时，语句的总执行次数$T(n)$是关于问题规模$n$的函数，进而分析$T(n)$随$n$的变化情况而确定$T(n)$的数量级。<br><strong>计算技巧</strong>：<br>1). 用常数1取代运行时间中左右的加法运算；<br>2). 如果最高幂次项存在，且不为1，则去除与这个项相乘的系数；<br>3). 得到的最后结果就是算法的时间复杂度。<br><strong>几个算法时间复杂度的例子</strong>：<br>1). <strong>线性阶</strong>:线性阶就是随着问题规模$n$的增大，对应的计算呈直线增长。<strong>记作$O(n)$</strong>.<br>2). <strong>平方阶</strong>:一般对应嵌套循环。例如两个嵌套循环，<strong>记作$O(n^2)$</strong>.<br>3). <strong>对数阶</strong>:由于每次$i \times 2$之后 ，就距离问题$n$更近一步，假设有$x$个2相乘后大于或等于$n$，则会退出循环。由于$2^x=n$，则$x=log_2(n)$，所以这个循环的时间复杂度就是$O(log_2(n))$，<strong>记作$O(log(n))$</strong>.<br>4). <strong>$nlog(n)$</strong>:例如$2n+3nlog(n)+4$ —&gt;$nlog(n)$，<strong>记作$O(nlog(n))$</strong>.<br>5). <strong>指数阶</strong>:例如$2^n$，<strong>记作$O(2^n)$</strong>.</li>
+<li>计算复杂度攻略：在计算分析算法复杂度时，语句的总执行次数$T(n)$是关于问题规模$n$的函数，进而分析$T(n)$随$n$的变化情况而确定$T(n)$的数量级。<br><strong>计算技巧</strong>：<br>1). 用常数1取代运行时间中左右的加法运算；<br>2). 如果最高幂次项存在，且不为1，则去除与这个项相乘的系数；<br>3). 得到的最后结果就是算法的时间复杂度。<br><strong>几个算法时间复杂度的例子</strong>：<br>1). <strong>线性阶</strong>:线性阶就是随着问题规模$n$的增大，对应的计算呈直线增长。<strong>记作$O(n)$</strong>.<br>2). <strong>平方阶</strong>:一般对应嵌套循环。例如两个嵌套循环，<strong>记作$O(n^2)$</strong>.<br>3). <strong>对数阶</strong>:由于每次$i \times 2$之后 ，就距离问题$n$更近一步，假设有$x$个2相乘后大于或等于$n$，则会退出循环。由于$2^x=n$，则$x=log_2(n)$，所以这个循环的时间复杂度就是$O(log_2(n))$，<strong>记作$O(log(n))$</strong>.<br>4). <strong>$nlog(n)$</strong>:例如$2n+3nlog(n)+4$ —&gt;$nlog(n)$，<strong>记作$O(nlog(n))$</strong>.<br>5). <strong>指数阶</strong>:例如$2^n$，<strong>记作$O(2^n)$</strong>.<br>总结：一般情况下，常用的时间复杂度耗时：$O(1)&lt;O(log(n))&lt;O(n)&lt;O(nlog(n))&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)$</li>
 </ol>
 <ul>
-<li><strong>算法的空间复杂度</strong><br>算法的空间复杂度：$S(n)=O(f(n))$，其中，$n$为问题的规模，$f(n)$为语句关于$n$所占的存储空间的总函数。</li>
+<li><strong>算法的空间复杂度</strong><br>在写代码的过程中，可以利用空间来换取时间。<br>算法的空间复杂度：$S(n)=O(f(n))$，其中，$n$为问题的规模，$f(n)$为语句关于$n$所占的存储空间的总函数。</li>
 </ul>
 
       
@@ -143,7 +144,7 @@
       <div>
       
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/03/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" data-id="ck4y2basm00013kuu64wpbdq2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/03/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" data-id="ck4zcnki5000724uu3lyy2ycd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hanxuhfut.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
@@ -153,6 +154,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/hanxuhfut.github.io/2020/01/04/%E7%BA%BF%E6%80%A7%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          线性表
+        
+      </div>
+    </a>
   
   
     <a href="/hanxuhfut.github.io/2019/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%A2%86%E5%9F%9F%E4%BC%9A%E8%AE%AE%E6%97%B6%E9%97%B4%E8%A1%A8%EF%BC%88%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
@@ -173,7 +183,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">504字</span>
+        <span class="post-count">623字</span>
       </span>
     </span>
     <span class="post-time">
@@ -181,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  预计阅读时长: </span>
-        <span class="post-count">1分钟</span>
+        <span class="post-count">2分钟</span>
       </span>
     </span>
 </div>
@@ -228,7 +238,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/hanxuhfut.github.io/tags/My-first-blog/" style="font-size: 10px;">My first blog</a> <a href="/hanxuhfut.github.io/tags/deadline/" style="font-size: 10px;">deadline</a> <a href="/hanxuhfut.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构与算法</a>
+      <a href="/hanxuhfut.github.io/tags/My-first-blog/" style="font-size: 10px;">My first blog</a> <a href="/hanxuhfut.github.io/tags/deadline/" style="font-size: 10px;">deadline</a> <a href="/hanxuhfut.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 20px;">数据结构与算法</a>
     </div>
   </div>
 
@@ -248,6 +258,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/hanxuhfut.github.io/2020/01/04/%E7%BA%BF%E6%80%A7%E8%A1%A8/">线性表</a>
+          </li>
         
           <li>
             <a href="/hanxuhfut.github.io/2020/01/03/%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法的时间复杂度与空间复杂度</a>
